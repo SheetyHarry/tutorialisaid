@@ -72,7 +72,7 @@ export default function Page({slug, pageData}) {
       setData(pageData);
     }
   }, [dataFetched, slug, pageData, sermonQuery]);
-  
+
   return dataFetched ? (
     <>
       <Main>

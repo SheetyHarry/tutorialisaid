@@ -24,8 +24,8 @@ const Blockquote = css`
   &::before {
     content: '\\201C';
     position: absolute;
-    top: .12em;
-    left: -.5em;
+    top: 0.12em;
+    left: -0.5em;
     color: #ebebeb;
     font-size: 5em;
     z-index: -1;
@@ -75,9 +75,9 @@ const CustomLinkSerializer = props => {
       </NavLink>
     );
   }
+
   return <a href={props.mark.href}>{props.children}</a>;
 };
-
 
 const InternalLinkSerializer = props => {
   return <a href={props.mark.slug}>{props.children}</a>;
@@ -103,10 +103,7 @@ const CustomStyleSerializer = props => {
 };
 
 const SanityBlock = props => (
-  <BlockContent
-    blocks={props.blocks}
-    serializers={serializers}
-  />
+  <BlockContent blocks={props.blocks} serializers={serializers} />
 );
 
 export default SanityBlock;

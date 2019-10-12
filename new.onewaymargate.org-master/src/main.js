@@ -27,11 +27,7 @@ export default function Main({mainData: {menuData, mainData}, pagesData}) {
           <Route
             exact
             path={process.env.PUBLIC_URL + '/talks'}
-            render={({match}) => (
-              <Sermons
-                slug="talks"
-              />
-            )}
+            render={({match}) => <Sermons slug="talks" />}
           />
           <Route
             path="/:slug"

@@ -22,7 +22,9 @@ function GridBlockSerializer({node: {blocks, columns, style}}) {
     <GridBlock
       items={blocks}
       columns={
-        columns === undefined|null ? `repeat(auto-fit, minmax(200px, 1fr))` : `repeat(${columns}, 1fr)`
+        (columns === undefined) | null
+          ? `repeat(auto-fit, minmax(200px, 1fr))`
+          : `repeat(${columns}, 1fr)`
       }
       gap="20px"
       style={style}

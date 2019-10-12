@@ -28,12 +28,7 @@ const HomeMapInner = styled('div')`
   }
 `;
 
-export default function MapLayout({
-  heading,
-  actions,
-  details,
-  location
-}) {
+export default function MapLayout({heading, actions, details, location}) {
   return (
     <HomeSection>
       <HomeMapInner>
@@ -68,7 +63,13 @@ export default function MapLayout({
           </GoogleMap>
         </LoadScript>
       </HomeMapInner>
-      <MapOverlay heading={heading} details={details} actions={actions} lat={location.location.lat} long={location.location.lng} />
+      <MapOverlay
+        heading={heading}
+        details={details}
+        actions={actions}
+        lat={location.location.lat}
+        long={location.location.lng}
+      />
     </HomeSection>
   );
 }

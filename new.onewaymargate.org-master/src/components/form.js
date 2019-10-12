@@ -112,7 +112,7 @@ export default function Form({title, id, description, fields}) {
           {fields.map(field => {
             return getFormField(field);
           })}
-        <input className="fullwidth" type="submit" value="Submit" />
+          <input className="fullwidth" type="submit" value="Submit" />
         </Grid>
       </fieldset>
     </form>
